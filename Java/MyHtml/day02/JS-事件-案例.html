@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常见事件案例</title>
+</head>
+<body>
+    <img id="light" src="img/off.gif"> <br>
+    <input type="button" value="点亮" onclick="on()"> <input type="button"  value="熄灭" onclick="off()">
+
+    <br> <br>
+
+    <input type="text" id="name" value="ITCAST" onfocus="lower()" onblur="upper()">
+    <br> <br>
+
+    <input type="checkbox" name="hobby"> 电影
+    <input type="checkbox" name="hobby"> 旅游
+    <input type="checkbox" name="hobby"> 游戏
+    <br>
+
+    <input type="button" value="全选" onclick="allChecked()"> <input type="button" value="反选" onclick="cancelChecked()">
+
+    <script>
+        /*
+        1、点击 “点亮” 按钮 点亮灯泡,点击 “熄灭” 按钮 熄灭灯泡。
+        2.输入框鼠标聚焦后，展示小写；鼠标离焦后，展示大写。
+        3.点击“全选”按钮使所有的复选框呈现被选中的状态，点击“反选”按钮使所有的复选框呈现取消勾选的状态。
+        */
+       function on(){
+            var img = document.getElementById("light");
+            img.src = "img/on.gif";
+       }
+
+       function off(){
+            var img = document.getElementById("light");
+            img.src = "img/off.gif";
+       }
+
+       function lower(){
+            var text = document.getElementById("name");
+            text.value = text.value.toLowerCase();
+       }
+
+       function upper(){
+            var text = document.getElementById("name");
+            text.value = text.value.toUpperCase();
+       }
+
+       function allChecked() {
+            var inputs = document.getElementsByName("hobby");
+            for (let i = 0; i < inputs.length; i++) {
+                const check = inputs[i];
+                check.checked = true;
+            }
+       }
+
+       function cancelChecked(){
+            var inputs = document.getElementsByName("hobby");
+            for (let i = 0; i < inputs.length; i++) {
+                const check = inputs[i];
+                check.checked = false;
+            }
+       }
+
+    </script>
+</body>
+</html>

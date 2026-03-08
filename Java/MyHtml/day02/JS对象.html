@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //自定义对象
+    var user = {
+        name: "Tom",
+        age: 2,
+        // eat: function(){
+        //     alert("吃饭");
+        // }
+        eat() {
+            alert("吃饭");
+        }
+    }
+    
+    // alert(user.name);
+    // user.eat();
+
+    //定义Json
+    var jsonStr = '{"name":"Tom", "age":12, "addr":["北京", "南京", "上海"]}';
+    var obj = JSON.parse(jsonStr);
+    alert(obj.name);
+    alert(JSON.stringify(obj));
+
+    
+
+</script>
+</html>

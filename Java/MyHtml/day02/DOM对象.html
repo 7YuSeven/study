@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <img id="light" src="img/off.gif"> <br>
+
+    <div class="cls">传智教育</div>   <br>
+    <div class="cls">黑马程序员</div> <br>
+
+    <input type="checkbox" name="hobby"> 电影
+    <input type="checkbox" name="hobby"> 旅游
+    <input type="checkbox" name="hobby"> 游戏
+    <br>
+    <script>
+        //根据ID获取元素
+        // var img = document.getElementById("light");
+        // alert(img);
+
+        //根据标签
+        // var divs = document.getElementsByTagName("div");
+        // for (let i = 0; i< divs.length; i++) {
+        //     alert(divs[i]);
+           
+        // }
+
+        //根据name属性获取
+        // var inputs = document.getElementsByName("hobby");
+        // for (let i = 0; i < inputs.length; i++) {
+        //     alert(inputs[i]);
+            
+        // }
+
+        //根据class获取
+        // var classes = document.getElementsByClassName("cls");
+        // for (let i = 0; i< classes.length; i++) {
+        //     alert(classes[i]);
+           
+        // }
+
+        // var div1 = classes[0];
+        // div1.innerHTML = "你好啊";
+
+        //1. 点亮灯泡
+        var img = document.getElementById("light");
+        img.src = "img/on.gif";
+        //2. 将所有的 div 标签的标签体内容替换为 非常好
+        var divs = document.getElementsByTagName("div")
+        for (let i = 0; i < divs.length; i++) {
+            divs[i].innerHTML += "<font color = 'red'>非常好</font>"
+        }
+        //3. 使所有的复选框呈现被选中的状态
+        var inputs = document.getElementsByName("hobby");
+        for (let i = 0; i < inputs.length; i++) {
+            const element = inputs[i];
+            element.checked = true;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //定义数组
+    // var arrays = new Array(1,2,3,4);\
+    //长度可变，类型可变
+    var arrays = [1,2,3,4,"ABC"];
+    arrays[10] = "CYH";
+    // console.log(arrays[1]);
+    // console.log(arrays[4]);
+    // console.log(arrays[10]);
+
+
+    // for (let i = 0; i < arrays.length; i++) {
+    //     console.log(arrays[i]);        
+    // }
+
+    //forEach遍历获取数组中有值的元素
+    // arrays.forEach(function (e){
+    //     console.log(e);
+    // });
+
+    // arrays.forEach(element => {
+    //     console.log(element);
+    // });
+
+    //添加元素到末尾
+    // arrays.push(10);
+    // console.log(arrays);
+
+    //删除元素
+    arrays.splice(2,2);
+    console.log(arrays);
+</script>
+</html>
